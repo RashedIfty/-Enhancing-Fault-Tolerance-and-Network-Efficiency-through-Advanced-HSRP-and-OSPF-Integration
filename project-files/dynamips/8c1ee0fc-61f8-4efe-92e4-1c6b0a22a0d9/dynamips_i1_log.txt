@@ -1,0 +1,53 @@
+Nov 21 23:34:09.788 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Nov 21 23:34:09.789 HYPERVISOR: Started on IP = localhost, TCP port = 64155.
+Nov 21 23:34:10.016 HYPERVISOR: exec_cmd: hypervisor version 
+Nov 21 23:34:10.017 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\JESAN\GNS3\projects\Configure small network HSRP and OSPF\project-files\dynamips 
+Nov 21 23:34:10.019 GENERAL: working_dir=C:\Users\JESAN\GNS3\projects\Configure small network HSRP and OSPF\project-files\dynamips
+Nov 21 23:34:10.019 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\JESAN\GNS3\projects\Configure small network HSRP and OSPF\project-files\dynamips\8c1ee0fc-61f8-4efe-92e4-1c6b0a22a0d9 
+Nov 21 23:34:10.020 GENERAL: working_dir=C:\Users\JESAN\GNS3\projects\Configure small network HSRP and OSPF\project-files\dynamips\8c1ee0fc-61f8-4efe-92e4-1c6b0a22a0d9
+Nov 21 23:34:10.020 HYPERVISOR: exec_cmd: vm create R1 1 c3745 
+Nov 21 23:34:10.021 VM: VM R1 created.
+Nov 21 23:34:10.021 HYPERVISOR: exec_cmd: vm set_con_tcp_port R1 5000 
+Nov 21 23:34:10.021 HYPERVISOR: exec_cmd: c3745 get_mac_addr R1 
+Nov 21 23:34:10.022 HYPERVISOR: exec_cmd: vm set_disk0 R1 0 
+Nov 21 23:34:10.022 HYPERVISOR: exec_cmd: vm set_exec_area R1 64 
+Nov 21 23:34:10.023 HYPERVISOR: exec_cmd: vm set_ios R1 C:/Users/JESAN/GNS3/images/IOS/c3745-advipservicesk9-mz.124-25d (1).image 
+Nov 21 23:34:10.024 HYPERVISOR: exec_cmd: c3745 set_mac_addr R1 c401.06ed.0000 
+Nov 21 23:34:10.024 HYPERVISOR: exec_cmd: vm set_nvram R1 256 
+Nov 21 23:34:10.024 HYPERVISOR: exec_cmd: vm set_ram R1 256 
+Nov 21 23:34:10.025 HYPERVISOR: exec_cmd: vm get_status R1 
+Nov 21 23:34:10.025 HYPERVISOR: exec_cmd: vm slot_add_binding R1 1 0 NM-1FE-TX 
+Nov 21 23:34:10.025 HYPERVISOR: exec_cmd: vm get_status R1 
+Nov 21 23:34:10.025 HYPERVISOR: exec_cmd: vm slot_add_binding R1 2 0 NM-4T 
+Nov 21 23:34:10.026 HYPERVISOR: exec_cmd: vm get_status R1 
+Nov 21 23:34:10.026 HYPERVISOR: exec_cmd: vm slot_add_binding R1 0 16 WIC-1T 
+Nov 21 23:34:10.026 HYPERVISOR: exec_cmd: vm get_status R1 
+Nov 21 23:34:10.026 HYPERVISOR: exec_cmd: vm slot_add_binding R1 0 32 WIC-1T 
+Nov 21 23:34:10.027 HYPERVISOR: exec_cmd: vm get_status R1 
+Nov 21 23:34:10.027 HYPERVISOR: exec_cmd: vm slot_add_binding R1 0 48 WIC-1T 
+Nov 21 23:34:12.981 HYPERVISOR: exec_cmd: nio create_udp udp-51e0d5cb-0172-4e0b-956d-4f13b52f7ad3 10006 127.0.0.1 10007 
+Nov 21 23:34:13.279 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R1 2 1 udp-51e0d5cb-0172-4e0b-956d-4f13b52f7ad3 
+Nov 21 23:34:13.279 HYPERVISOR: exec_cmd: vm get_status R1 
+Nov 21 23:34:14.293 HYPERVISOR: exec_cmd: nio create_udp udp-09fecf78-c36e-4dba-b9f7-898eda07d3b6 10034 127.0.0.1 10035 
+Nov 21 23:34:14.300 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R1 0 1 udp-09fecf78-c36e-4dba-b9f7-898eda07d3b6 
+Nov 21 23:34:14.300 HYPERVISOR: exec_cmd: vm get_status R1 
+Nov 21 23:34:26.953 HYPERVISOR: exec_cmd: vm create Ghost 0 c3745 
+Nov 21 23:34:26.954 VM: VM Ghost created.
+Nov 21 23:34:26.955 HYPERVISOR: exec_cmd: vm set_ios Ghost C:/Users/JESAN/GNS3/images/IOS/c3745-advipservicesk9-mz.124-25d (1).image 
+Nov 21 23:34:26.956 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Nov 21 23:34:26.957 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost C:\Users\JESAN\GNS3\projects\Configure small network HSRP and OSPF\project-files\dynamips\c3745-advipservicesk9-mz.124-25d (1).image-256.ghost 
+Nov 21 23:34:26.957 HYPERVISOR: exec_cmd: vm set_ram Ghost 256 
+Nov 21 23:34:26.958 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Nov 21 23:34:26.963 HYPERVISOR: exec_cmd: vm set_config Ghost configs\i0_startup-config.cfg 
+Nov 21 23:34:26.963 HYPERVISOR: exec_cmd: vm start Ghost 
+Nov 21 23:34:27.295 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Nov 21 23:34:27.296 HYPERVISOR: exec_cmd: vm stop Ghost 
+Nov 21 23:34:27.408 VM: VM Ghost shutdown.
+Nov 21 23:34:27.409 HYPERVISOR: exec_cmd: vm extract_config Ghost 
+Nov 21 23:34:27.410 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Nov 21 23:34:27.410 VM: VM Ghost destroyed.
+Nov 21 23:34:27.417 HYPERVISOR: exec_cmd: vm set_ghost_status R1 2 
+Nov 21 23:34:27.418 HYPERVISOR: exec_cmd: vm set_ghost_file R1 C:\Users\JESAN\GNS3\projects\Configure small network HSRP and OSPF\project-files\dynamips\c3745-advipservicesk9-mz.124-25d (1).image-256.ghost 
+Nov 21 23:34:27.418 HYPERVISOR: exec_cmd: vm get_status R1 
+Nov 21 23:34:27.425 HYPERVISOR: exec_cmd: vm set_config R1 configs\i1_startup-config.cfg 
+Nov 21 23:34:27.426 HYPERVISOR: exec_cmd: vm start R1 
